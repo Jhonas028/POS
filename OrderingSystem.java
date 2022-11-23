@@ -75,7 +75,7 @@ public class OrderingSystem {
     System.out.println("[C] Dessert");
     System.out.println("[D] Add-ons\n");
     
-    System.out.print("Enter Category: ");
+    System.out.print("Enter Order Category: ");
         order =  scan.next().charAt(0);
     System.out.print(" \n");
     
@@ -89,12 +89,14 @@ public class OrderingSystem {
         System.out.println("[B] 2pc. chicken (150)\n");
         
         
-        System.out.print("Enter Category: ");
+        System.out.print("Enter Chicken Category: ");
             chicken = scan.next().charAt(0);
       
 
         if (chicken == 'A') { //customer choose 1pc. Chicken
-            System.out.println("1pc. Chicken\n");
+            System.out.println("==========================================");
+            System.out.println("           1pc. Chicken\n");
+            System.out.println("==========================================\n");
            
             
             System.out.println("Beverage\n");   //drinks
@@ -103,7 +105,7 @@ public class OrderingSystem {
             System.out.println("[C] Alacarte\n");
             
             
-            System.out.print("Enter Category: ");
+            System.out.print("Enter Beverage Category: ");
                 drinksonechick = scan.next().charAt(0);
                 
                 
@@ -131,7 +133,9 @@ public class OrderingSystem {
                
                   
         }   else if (chicken == 'B') { // customer order 2pc. chicken
-                    System.out.println("2pc. Chicken\n");
+                    System.out.println("==========================================");
+                    System.out.println("           2pc. Chicken\n");
+                    System.out.println("==========================================\n");
             
                     System.out.println("Beverage\n");   //drinks
                     System.out.println("[A] Coke (+10)");
@@ -139,7 +143,7 @@ public class OrderingSystem {
                     System.out.println("[C] Alacarte\n");
                     
                    
-                    System.out.print("Enter Category: \n");
+                    System.out.print("Enter Beverage Category: \n");
                           drinkstwochick = scan.next().charAt(0);
                     
                     
@@ -174,11 +178,14 @@ public class OrderingSystem {
              System.out.println("[B] Carbonara (60)\n");
              
            
-            System.out.print("Enter Category: ");
+            System.out.print("Enter Pasta Category: ");
                 pasta = scan.next().charAt(0);
            
             
             if (pasta == 'A') { //customer order a spaghetti
+                System.out.println("==========================================");
+                System.out.println("           Spaghetti");
+                System.out.println("==========================================\n");
                 
             System.out.println("Beverage\n");   //drinks
             System.out.println("[A] Coke (+10)");
@@ -186,7 +193,7 @@ public class OrderingSystem {
             System.out.println("[C] Alacarte\n");
             
            
-            System.out.print("Enter Category: \n");
+            System.out.print("Enter Beverage Category: \n");
            
             
                 drinkspag = scan.next().charAt(0);
@@ -210,13 +217,17 @@ public class OrderingSystem {
                         System.out.print("You Entered a wrong key !");
                     }
             }   else if (pasta == 'B') { // customer order a carbonara
+                System.out.println("==========================================");
+                System.out.println("           Carbonara");
+                System.out.println("==========================================\n");
+
                 System.out.println("Beverage\n");   //drinks
                 System.out.println("[A] Coke (+10)");
                 System.out.println("[B] Sprite(+12)");
                 System.out.println("[C] Alacarte\n");
                 
                
-                System.out.print("Enter Category: ");
+                System.out.print("Enter Beverage Category: ");
                     drinkscarb = scan.next().charAt(0);
                 
                 
@@ -224,17 +235,17 @@ public class OrderingSystem {
                         System.out.print("Quantity: ");  //quantity of pasta coke
                             carb = scan.nextInt();
                         total += ((carb * 10) + (carb * 60));
-                            receipt += carb + "               " + "Carbonara w/ coke";
+                            receipt += carb + "               " + "Carbonara w/ coke\n";
                     } else if (drinkscarb == 'B') {
                         System.out.print("Quantity: ");  //quantity of pasta sprite
                             carb = scan.nextInt();
                         total += ((carb * 10) + (carb * 60));
-                            receipt += carb + "               " + "Carbonara w/ Sprite";
+                            receipt += carb + "               " + "Carbonara w/ Sprite\n";
                     } else if (drinkscarb == 'C') {
                         System.out.print("Quantity: ");  //quantity of pasta alacarte
                             carb = scan.nextInt();
                         total += carb * 60;
-                        receipt += carb + "               " + "Carbonara";
+                        receipt += carb + "               " + "Carbonara\n";
                     } else {
                         System.out.print("You Entered a wrong key !");
                     }
@@ -251,11 +262,15 @@ public class OrderingSystem {
                  System.out.println("[B] Brownies (20)\n");
         
           
-                 System.out.print("Enter Category: ");
+                 System.out.print("Enter Dessert Category: ");
                      dessert = scan.next().charAt(0);
                
                  
                  if (dessert == 'A') {
+                    System.out.println("==========================================");
+                    System.out.println("           Ice Cream");
+                    System.out.println("==========================================\n");
+
                     System.out.println("Ice Cream"); // quantity of ice cream
                     System.out.print("Quantity: ");
                         ic = scan.nextInt();
@@ -263,6 +278,9 @@ public class OrderingSystem {
                         receipt += ic + "               " + "Ice Cream\n";
                  
                  } else if (dessert == 'B') {
+                    System.out.println("==========================================");
+                    System.out.println("           Brownies");
+                    System.out.println("==========================================\n");
                     System.out.println("Brownies"); // quantity of brownies
                     System.out.print("Quantity: ");
                         brow = scan.nextInt();
@@ -278,17 +296,24 @@ public class OrderingSystem {
                         System.out.println("[A] Rice (15)");
                         System.out.println("[B] Gravy (10)\n");
 
-                        System.out.print("Enter Category: \n");
+                        System.out.print("Enter Add-ons Category: \n");
                         addons = scan.next().charAt(0);
                    
 
                             if (addons == 'A') {
+                                System.out.println("==========================================");
+                                System.out.println("           Rice");
+                                System.out.println("==========================================\n");
+
                                 System.out.println("Rice");
                                 System.out.print("Quantity: "); //add ons for rice
                                     rice = scan.nextInt();
                                 total += rice * 15;
                                     receipt += rice + "               " + "Rice\n";
                                 } else if (addons == 'B') {
+                                    System.out.println("==========================================");
+                                    System.out.println("           Gravy");
+                                    System.out.println("==========================================\n");
                                     System.out.println("Gravy");
                                     System.out.print("Quantity: "); // add ons for gravy
                                         gravy = scan.nextInt();
