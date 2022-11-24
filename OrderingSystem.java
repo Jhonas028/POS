@@ -37,6 +37,9 @@ public class OrderingSystem {
     
     //receipt
     String receipt = "";
+
+    //dineine or Take home
+    char answ = 'D';
     
     
     System.out.println("==========================================");
@@ -62,14 +65,18 @@ public class OrderingSystem {
     //          System.exit(0);
     //     }
     
-    System.out.println("Dine-in / Take-out\n");
+    System.out.println("Instruction: Type the corresponding letter for customer choice\n");
+    System.out.println("[D] for Dine-in");
+    System.out.println("[T] for Take-Home\n");
+    System.out.print("Type your Answer: ");
+         answ = scan.next().charAt(0);
+            
+            
 
     for (int i = 0; action == 'Y'; i++) { //start of looping
-        
-    
-    System.out.println("Type the corresponding letter for customer choice\n");
-    
-    
+          
+
+    System.out.println("\n");
     System.out.println("[A] Chicken");
     System.out.println("[B] Pasta");
     System.out.println("[C] Dessert");
@@ -331,13 +338,21 @@ public class OrderingSystem {
     System.out.println("Do you want to proceed?Y/N");
         System.out.print("Type your Answer: ");
             action = scan.next().charAt(0);
-            
+        
     }//end of looping
     
       System.out.print(" \n");
       System.out.println("==========================================");
       System.out.println("              Receipt");
       System.out.println("==========================================\n");
+
+      if (answ == 'D') { // start of if statement for din/th
+        System.out.println("Dine-in\n");
+    } else { 
+        System.out.print("Take-Home");
+    }// end of dn/th statement
+
+   
       System.out.println("Quantity          Product\n");
       System.out.println(receipt);
       
