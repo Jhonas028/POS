@@ -32,6 +32,7 @@ public class OrderingSystem {
     char action = 'Y';
     
     //payment
+    char bal = 'Y';
     int money;
     int total = 0;
     
@@ -46,24 +47,25 @@ public class OrderingSystem {
     System.out.println("               POS System");
     System.out.println("==========================================\n");
     
-    // System.out.println("==========================================");
-    // System.out.println("               Please Log-in");
-    // System.out.println("==========================================\n");
+    System.out.println("==========================================");
+    System.out.println("               Please Log-in");
+    System.out.println("==========================================\n");
     
-    // System.out.print("Username: ");
-    //     user = scan.nextLine();
-    // System.out.print("Password: ");
-    //     pass = scan.nextInt();
+    System.out.print("Username: ");
+        user = scan.nextLine();
+    System.out.print("Password: ");
+        pass = scan.nextInt();
         
-    //     if (username.equals(user) && password == pass) {
-    //         System.out.println("==========================================");
-    //         System.out.println("               MENU");
-    //         System.out.println("==========================================\n");
+        if (username.equals(user) && password == pass) {
+            System.out.println("==========================================");
+            System.out.println("               MENU");
+            System.out.println("==========================================\n");
       
-    //     } else {
-    //      System.out.print("Fail to Log-in, Please try again");
-    //          System.exit(0);
-    //     }
+        } else {
+         System.out.print(" \n");
+         System.out.print("Fail to Log-in, Please try again");
+             System.exit(0);
+        }
     
     System.out.println("Instruction: Type the corresponding letter for customer choice\n");
     System.out.println("[D] for Dine-in");
@@ -150,7 +152,7 @@ public class OrderingSystem {
                     System.out.println("[C] Alacarte\n");
                     
                    
-                    System.out.print("Enter Beverage Category: \n");
+                    System.out.print("Enter Beverage Category:");
                           drinkstwochick = scan.next().charAt(0);
                     
                     
@@ -200,7 +202,7 @@ public class OrderingSystem {
             System.out.println("[C] Alacarte\n");
             
            
-            System.out.print("Enter Beverage Category: \n");
+            System.out.print("Enter Beverage Category: ");
            
             
                 drinkspag = scan.next().charAt(0);
@@ -209,17 +211,17 @@ public class OrderingSystem {
                         System.out.print("Quantity: ");  //quantity of pasta coke
                             spag = scan.nextInt();
                         total += ((spag * 10) + (spag * 50));
-                            receipt += spag + "               " + "Spaghetti w/ coke";
+                            receipt += spag + "               " + "Spaghetti w/ coke\n";
                     } else if (drinkspag == 'B') {
                         System.out.print("Quantity: ");  //quantity of pasta sprite
                             spag = scan.nextInt();
                         total += ((spag * 10) + (spag * 50));
-                            receipt += spag + "               " + "Spaghetti w/ Sprite";
+                            receipt += spag + "               " + "Spaghetti w/ Sprite\n";
                     } else if (drinkspag == 'C') {
                         System.out.print("Quantity: ");  //quantity of pasta alacarte
                             spag = scan.nextInt();
                         total += spag * 50;
-                            receipt += spag + "               " + "Spaghetti";
+                            receipt += spag + "               " + "Spaghetti\n";
                     } else {
                         System.out.print("You Entered a wrong key !");
                     }
@@ -332,10 +334,12 @@ public class OrderingSystem {
 
                 } // add ons ending
                 else  {
-                    System.out.println("You Entered a wrong key");
+                    System.out.print(" \n");
+                    System.out.println("You Entered a wrong key\n");
+                    
                 }
     System.out.print(" \n");
-    System.out.println("Do you want to proceed?Y/N");
+    System.out.println("Do you want to continue ordering? Y/N");
         System.out.print("Type your Answer: ");
             action = scan.next().charAt(0);
         
@@ -346,7 +350,7 @@ public class OrderingSystem {
       System.out.println("              Receipt");
       System.out.println("==========================================\n");
 
-      if (answ == 'D') { // start of if statement for din/th
+    if (answ == 'D') { // start of if statement for din/th
         System.out.println("Dine-in\n");
     } else { 
         System.out.print("Take-Home");
@@ -356,15 +360,30 @@ public class OrderingSystem {
       System.out.println("Quantity          Product\n");
       System.out.println(receipt);
       
+      
       System.out.print(" \n");
       System.out.println("Total: " + total + " \n");   
-      System.out.print("PAYMENT CASH: ");
-        money = scan.nextInt();
+
+
+      
+
+        for (int i = 0; bal == 'Y'; i++) {
+            System.out.print("PAYMENT CASH: ");
+                money = scan.nextInt();
+
           if (money > total) {
               System.out.println("Change: " + (money - total));
+                System.exit(0);
           } else if (money == total) {
               System.out.print("Thank you ! Please come again.");
-          }
+          } else if (money < total){
+            System.out.println("Payment is not enough: ");
+            System.out.println("Balance: " + (total - money));
+            System.out.print("Do you want to continue? Y/N");
+                bal = scan.next().charAt(0);
+          } // end of if statement
+        }
+
 
           
           
