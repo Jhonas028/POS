@@ -347,7 +347,7 @@ public class OrderingSystem {
     
       System.out.print(" \n");
       System.out.println("==========================================");
-      System.out.println("              Summary");
+      System.out.println("                 Summary");
       System.out.println("==========================================\n");
 
 
@@ -405,7 +405,7 @@ public class OrderingSystem {
 
                 System.out.print(" \n");
                 System.out.println("==========================================");
-                System.out.println("              Receipt");
+                System.out.println("                 Receipt");
                 System.out.println("==========================================\n");
           
                 if (answ == 'D') { // start of if statement for din/th
@@ -421,8 +421,14 @@ public class OrderingSystem {
                 System.out.println("Total: " + total);   
                 System.out.println("Customer payment: " + payment);   
                 System.out.printf("Change: %.2f",payment1); 
-                System.out.print("Thank you please come again."); 
+                System.out.print(" \n");
+                if (pwd =='Y' || snr == 'Y') {
+                System.out.println("Discount: " + "20%");
+                System.out.print("\nThank you please come again."); 
                 System.exit(0);
+                } else {
+                System.out.print("Thank you please come again."); 
+                }
              } 
                 else if (payment < total) {
                 payment2 = payment - total;
