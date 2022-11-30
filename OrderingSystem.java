@@ -33,8 +33,8 @@ public class OrderingSystem {
     
     //payment
     char bal = 'Y';
-    int money;
-    int total = 0;
+    int payment;
+    double total = 0;
     
     //receipt
     String receipt = "";
@@ -347,16 +347,10 @@ public class OrderingSystem {
     
       System.out.print(" \n");
       System.out.println("==========================================");
-      System.out.println("              Receipt");
+      System.out.println("              Summary");
       System.out.println("==========================================\n");
 
-    if (answ == 'D') { // start of if statement for din/th
-        System.out.println("Dine-in\n");
-    } else { 
-        System.out.print("Take-Home");
-    }// end of dn/th statement
 
-   
       System.out.println("Quantity          Product\n");
       System.out.println(receipt);
       
@@ -365,25 +359,123 @@ public class OrderingSystem {
       System.out.println("Total: " + total + " \n");   
 
 
+    //Computing pwd and snr discount for payment
+
+    char pwd = 'Y';
+    char snr = 'Y';
+
+    double discount1;
+ 
       
+        System.out.print(" \n");
+        System.out.println("PWD Discount? Y/N");
+            System.out.print("Type your answer: ");
+                  pwd = scan.next().charAt(0);
+        System.out.print(" \n");
+        System.out.println("Senior Discount? Y/N ");
+            System.out.print("TYpe your answer: ");
+                  snr = scan.next().charAt(0);
+        System.out.print(" \n");
 
-        for (int i = 0; bal == 'Y'; i++) {
-            System.out.print("PAYMENT CASH: ");
-                money = scan.nextInt();
+        if (pwd == 'Y' || snr == 'Y') {
 
-          if (money > total) {
-              System.out.println("Change: " + (money - total));
-                System.exit(0);
-          } else if (money == total) {
-              System.out.print("Thank you ! Please come again.");
-          } else if (money < total){
-            System.out.println("Payment is not enough: ");
-            System.out.println("Balance: " + (total - money));
-            System.out.print("Do you want to continue? Y/N");
-                bal = scan.next().charAt(0);
-          } // end of if statement
+            discount1 = total * .20;
+            total = total - discount1;
+           
+            System.out.printf("Total payment: %.2f",total);
+            System.out.print(" \n");
+
+        }  else {
+            System.out.println("Total payment: " + total);
+            System.out.print(" \n");
         }
+    
+        //Client pays money
+        char transaction = 'Y';
+        double payment1,payment2;
 
+        for (int i = 0; transaction == 'Y'; i++) {
+
+            System.out.print(" \n");
+            System.out.print("Cash payment: ");
+                payment = scan.nextInt();
+
+             if (payment > total) {
+                payment1 = payment - total;
+
+                System.out.print(" \n");
+                System.out.println("==========================================");
+                System.out.println("              Receipt");
+                System.out.println("==========================================\n");
+          
+                if (answ == 'D') { // start of if statement for din/th
+                  System.out.println("Dine-in\n");
+                } else { 
+                  System.out.print("Take-Home");
+                }// end of dn/th statement
+          
+                System.out.println("Quantity          Product\n");
+                System.out.println(receipt);
+          
+                System.out.print(" \n");
+                System.out.println("Total: " + total);   
+                System.out.println("Customer payment: " + payment);   
+                System.out.printf("Change: %.2f",payment1); 
+                System.out.print("Thank you please come again."); 
+                System.exit(0);
+             } 
+                else if (payment < total) {
+                payment2 = payment - total;
+                System.out.printf("Payment insufficient: %.2f",payment2);
+                System.out.print(" \n");
+                System.out.println("Do you want to continue the transaction? Y/N");
+                System.out.print("Type your answer: ");
+                    transaction =  scan.next().charAt(0);
+                }
+                    else if (payment == total) {
+                        System.out.print(" \n");
+                System.out.println("==========================================");
+                System.out.println("              Receipt");
+                System.out.println("==========================================\n");
+          
+                if (answ == 'D') { // start of if statement for din/th
+                  System.out.println("Dine-in\n");
+                } else { 
+                  System.out.print("Take-Home");
+                }// end of dn/th statement
+          
+                System.out.println("Quantity          Product\n");
+                System.out.println(receipt);
+          
+                System.out.print(" \n");
+                System.out.println("Total: " + total);   
+                System.out.print("Thank you please come again.");
+                System.exit(0);
+                    }
+
+         }
+
+        
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+      
 
           
           
