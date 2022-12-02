@@ -6,7 +6,7 @@ public class OrderingSystem {
     Scanner scan = new Scanner(System.in);
     
     //log in
-    String username = "Zyra", user;
+    String username = "Jhonas", user;
     int password = 123, pass;
     
     //ordering chicken
@@ -33,7 +33,7 @@ public class OrderingSystem {
     
     //payment
     char bal = 'Y';
-    int payment;
+    double payment;
     double total = 0;
     
     //receipt
@@ -339,7 +339,7 @@ public class OrderingSystem {
                     
                 }
     System.out.print(" \n");
-    System.out.println("Do you want to continue ordering? Y/N");
+    System.out.println("Continue? Y/N");
         System.out.print("Type your Answer: ");
             action = scan.next().charAt(0);
         
@@ -394,39 +394,45 @@ public class OrderingSystem {
         char transaction = 'Y';
         double payment1,payment2;
 
-        for (int i = 0; transaction == 'Y'; i++) {
+        for (int i = 0; transaction == 'Y'; i++) { // start of for loop for payment
 
             System.out.print(" \n");
             System.out.print("Cash payment: ");
-                payment = scan.nextInt();
+                payment = scan.nextDouble();
 
-             if (payment > total) {
+             if (payment > total) { //customer payment is greater than the total
                 payment1 = payment - total;
 
                 System.out.print(" \n");
-                System.out.println("==========================================");
-                System.out.println("                 Receipt");
-                System.out.println("==========================================\n");
+                System.out.println("           JOBILEE PINOY");
+                System.out.println("      234 Ayala, Marikina City");
+                System.out.println("              Receipt");
+                System.out.println("==========================================\n"); // intro receipt
           
-                if (answ == 'D') { // start of if statement for din/th
-                  System.out.println("Dine-in\n");
+                if (answ == 'D') { // code for dine in and take out
+                  System.out.println("Dine-in\n");                      
                 } else { 
                   System.out.print("Take-Home");
                 }// end of dn/th statement
           
-                System.out.println("Quantity          Product\n");
+                System.out.println("Quantity          Product\n");  //receip2
                 System.out.println(receipt);
           
                 System.out.print(" \n");
-                System.out.println("Total: " + total);   
-                System.out.println("Customer payment: " + payment);   
-                System.out.printf("Change: %.2f",payment1); 
-                System.out.print(" \n");
-                if (pwd =='Y' || snr == 'Y') {
-                System.out.println("Discount: " + "20%");
-                System.out.print("\nThank you please come again."); 
+                System.out.println("Total: " + total);   //total of bills
+                System.out.println("Customer payment: " + payment);   //customer payment code
+                System.out.printf("Change: %.2f",payment1); //customer change   
+
+                if (pwd =='Y' || snr == 'Y') { //discount code
+                System.out.println("\nDiscount: " + "20%");
+                System.out.print(" \n");  
+                System.out.println("This serves as official receipt");
+                System.out.println("feedback? Email us @jobileepinoy.com.ph");
+                System.out.print("Thank you please come again.");
                 System.exit(0);
                 } else {
+                System.out.println("This serves as official receipt");
+                System.out.println("feedback? Email us @jobileepinoy.com.ph");
                 System.out.print("Thank you please come again."); 
                 }
              } 
@@ -437,10 +443,11 @@ public class OrderingSystem {
                 System.out.println("Do you want to continue the transaction? Y/N");
                 System.out.print("Type your answer: ");
                     transaction =  scan.next().charAt(0);
-                }
-                    else if (payment == total) {
-                        System.out.print(" \n");
-                System.out.println("==========================================");
+            }
+                else if (payment == total) { // customer equal payment
+                System.out.print(" \n");
+                System.out.println("           JOBILEE PINOY");
+                System.out.println("      234 Ayala, Marikina City");
                 System.out.println("              Receipt");
                 System.out.println("==========================================\n");
           
@@ -454,12 +461,28 @@ public class OrderingSystem {
                 System.out.println(receipt);
           
                 System.out.print(" \n");
-                System.out.println("Total: " + total);   
+                System.out.println("Total: " + total);  
+                if (pwd =='Y' || snr == 'Y') {
+                System.out.println("Discount: 20%");
+                System.out.println("This serves as official receipt");
+                System.out.println("feedback? Email us @jobileepinoy.com.ph");
                 System.out.print("Thank you please come again.");
                 System.exit(0);
+                }
+                else {
+                    System.out.print(" \n");
+                    System.out.println("This serves as official receipt");
+                    System.out.println("feedback? Email us @jobileepinoy.com.ph");
+                    System.out.print("Thank you please come again."); 
                     }
+                
+            } // end of customer equal payment
 
-         }
+          
+
+
+
+         } // end of for loop for payment
 
         
 
