@@ -444,7 +444,7 @@ public class OrderingSystem01 {
                             System.exit(0);
                         }
             } // end of customer equal payment
-                System.out.print("Invalid keyword! Thank you please come again!"); // code for 451 if incorrect put of letter
+                System.out.print("Invalid keyword! Thank you please come again!"); // code for 412 if incorrect put of letter
          } // end of for loop for payment
 
         
