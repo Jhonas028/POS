@@ -5,7 +5,7 @@ public class OrderingSystem01 {
     
     Scanner scan = new Scanner(System.in);
     
-    //log in
+    //log in Assume that the counter already have an account created in the office.
     String username = "Jhonas", user;
     int password = 123, pass;
     
@@ -32,19 +32,18 @@ public class OrderingSystem01 {
     char action = 'Y';
     
     //payment
-    char bal = 'Y';
-    double payment;
+    double payment,payment1,payment2,discount1;
     double total = 0;
-    
+    char pwdsnr = 'Y',transaction = 'Y';
+   
     //receipt
     String receipt = "";
 
     //dineine or Take home
     char answ = 'D';
-    
-    
+      
     System.out.println("==========================================");
-    System.out.println("               POS System");
+    System.out.println("             JOBILEE POS SYSTEM");
     System.out.println("==========================================\n");
     
     System.out.println("==========================================");
@@ -62,17 +61,13 @@ public class OrderingSystem01 {
             System.out.println("[T] for Take-Home\n");
             System.out.print("Type your Answer: ");
                 answ = scan.next().charAt(0);
-                    
-      
+                       
         } else {
             System.out.print(" \n");
             System.out.print("Fail to Log-in, Please try again");
                 System.exit(0);
         }
     
-   
-            
-
     for (int i = 0; action == 'Y'; i++) { //start of looping
         System.out.println("\n==========================================");
         System.out.println("                   MENU");
@@ -86,8 +81,7 @@ public class OrderingSystem01 {
         System.out.print("Enter Order Category: ");
             order =  scan.next().charAt(0);
         System.out.print(" \n");
-    
-    
+     
     if (order == 'A') {   // Customer order a Chicken
         System.out.println("\n==========================================");
         System.out.println("                 Chicken");
@@ -100,7 +94,6 @@ public class OrderingSystem01 {
         System.out.print("Enter Chicken Category: ");
             chicken = scan.next().charAt(0);
       
-
         if (chicken == 'A') { //customer choose 1pc. Chicken
             System.out.println("\n==========================================");
             System.out.println("              1pc. Chicken");
@@ -111,13 +104,10 @@ public class OrderingSystem01 {
             System.out.println("[A] Coke (+10)");
             System.out.println("[B] Sprite(+12)");
             System.out.println("[C] Alacarte\n");
-            
-            
+             
             System.out.print("Enter Beverage Category: ");
                 drinksonechick = scan.next().charAt(0);
                 
-                
-            
                     if (drinksonechick == 'A') {
                         System.out.print("Quantity: ");  //quantity of 1pc chick and coke
                             quantityonechick = scan.nextInt();
@@ -138,8 +128,7 @@ public class OrderingSystem01 {
                          System.out.print("\nYou Entered a wrong key !");
                          
                     }
-               
-                  
+            
         }   else if (chicken == 'B') { // customer order 2pc. chicken
                     System.out.println("==========================================");
                     System.out.println("              2pc. Chicken\n");
@@ -150,10 +139,8 @@ public class OrderingSystem01 {
                     System.out.println("[B] Sprite(+12)");
                     System.out.println("[C] Alacarte\n");
                     
-                   
                     System.out.print("Enter Beverage Category:");
                           drinkstwochick = scan.next().charAt(0);
-                    
                     
                     if (drinkstwochick == 'A') {
                     System.out.print("Quantity: ");  //quantity of 2pc chick and coke
@@ -191,7 +178,6 @@ public class OrderingSystem01 {
             System.out.print("Enter Pasta Category: ");
                 pasta = scan.next().charAt(0);
            
-            
             if (pasta == 'A') { //customer order a spaghetti
                 System.out.println("==========================================");
                 System.out.println("              Spaghetti");
@@ -202,10 +188,8 @@ public class OrderingSystem01 {
             System.out.println("[B] Sprite(+12)");
             System.out.println("[C] Alacarte\n");
             
-           
             System.out.print("Enter Beverage Category: ");
            
-            
                 drinkspag = scan.next().charAt(0);
                     if (drinkspag == 'A') {
                       
@@ -239,7 +223,6 @@ public class OrderingSystem01 {
                
                 System.out.print("Enter Beverage Category: ");
                     drinkscarb = scan.next().charAt(0);
-                
                 
                     if (drinkscarb == 'A') {
                         System.out.print("Quantity: ");  //quantity of pasta coke
@@ -275,7 +258,6 @@ public class OrderingSystem01 {
                  System.out.print("Enter Dessert Category: ");
                      dessert = scan.next().charAt(0);
                
-                 
                  if (dessert == 'A') {
                     System.out.println("==========================================");
                     System.out.println("              Ice Cream");
@@ -331,8 +313,6 @@ public class OrderingSystem01 {
                                      receipt += gravy + "               " + "Gravy\n";
                                   }
    
-
-
                 } // add ons ending
                 else  {
                     System.out.print(" \n");
@@ -351,32 +331,14 @@ public class OrderingSystem01 {
       System.out.println("                 Summary");
       System.out.println("==========================================\n");
 
-
       System.out.println("Quantity          Product\n");
       System.out.println(receipt);
-      
       
       System.out.print(" \n");
       System.out.println("Total: " + total + " \n");   
 
-
     //Computing pwd and snr discount for payment
 
-    char pwdsnr = 'Y';
-    
-
-    double discount1;
- 
-      
-        // System.out.print(" \n");
-        // System.out.println("PWD Discount? Y/N");
-        // System.out.print("Type your answer: ");
-        //           pwd = scan.next().charAt(0);
-        // System.out.print(" \n");
-        // System.out.println("Senior Discount? Y/N ");
-        // System.out.print("TYpe your answer: ");
-        //           snr = scan.next().charAt(0);
-        // System.out.print(" \n");
         System.out.println("==========================================\n");
         System.out.println("\nPWD/SNR Discount? Y/N");
         System.out.print("Type your answer: ");
@@ -397,8 +359,7 @@ public class OrderingSystem01 {
         }
     
         //Client pays money
-        char transaction = 'Y';
-        double payment1,payment2;
+        
 
         for (int i = 0; transaction == 'Y'; i++) { // start of for loop for payment
 
@@ -482,14 +443,8 @@ public class OrderingSystem01 {
                             System.out.print("Thank you please come again.\n"); 
                             System.exit(0);
                         }
-                
             } // end of customer equal payment
                 System.out.print("Invalid keyword! Thank you please come again!"); // code for 451 if incorrect put of letter
-
-          
-
-
-
          } // end of for loop for payment
 
         
