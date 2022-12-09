@@ -251,7 +251,7 @@ public class OrderingSystem01 {
                  System.out.println("                 Dessert");
                  System.out.println("==========================================\n");
         
-                 System.out.println("[A] Ice cream (25)");
+                 System.out.println("[A] Chocolate Ice cream (25)");
                  System.out.println("[B] Brownies (20)\n");
         
           
@@ -263,7 +263,7 @@ public class OrderingSystem01 {
                     System.out.println("              Ice Cream");
                     System.out.println("==========================================\n");
 
-                    System.out.println("Ice Cream"); // quantity of ice cream
+                    System.out.println("Chocolate Ice Cream"); // quantity of ice cream
                     System.out.print("Quantity: ");
                         ic = scan.nextInt();
                     total += ic * 25;
