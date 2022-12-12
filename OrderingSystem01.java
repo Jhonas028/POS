@@ -68,7 +68,7 @@ public class OrderingSystem01 {
                 System.exit(0);
         }
     
-    for (int i = 0; action == 'Y'; i++) { //start of looping
+    while (action == 'Y') { //start of looping
         System.out.println("\n==========================================");
         System.out.println("                   MENU");
         System.out.println("==========================================\n");
@@ -361,7 +361,7 @@ public class OrderingSystem01 {
         //Client pays money
         
 
-        for (int i = 0; transaction == 'Y'; i++) { // start of for loop for payment
+        while (transaction == 'Y') { // start of for loop for payment
 
             System.out.print(" \n");
             System.out.println("==========================================\n");
