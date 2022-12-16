@@ -68,7 +68,7 @@ public class OrderingSystem01 {
                 System.exit(0);
         }
     
-    while (action == 'Y') { //start of looping
+    while (Character.toUpperCase(Character.toLowerCase(action)) == 'Y') { //start of looping
         System.out.println("\n==========================================");
         System.out.println("                   MENU");
         System.out.println("==========================================\n");
@@ -82,7 +82,7 @@ public class OrderingSystem01 {
             order =  scan.next().charAt(0);
         System.out.print(" \n");
      
-    if (order == 'A') {   // Customer order a Chicken
+    if (Character.toUpperCase(Character.toLowerCase(order)) == 'A') {   // Customer order a Chicken
         System.out.println("\n==========================================");
         System.out.println("                 Chicken");
         System.out.println("==========================================\n");
@@ -94,7 +94,7 @@ public class OrderingSystem01 {
         System.out.print("Enter Chicken Category: ");
             chicken = scan.next().charAt(0);
       
-        if (chicken == 'A') { //customer choose 1pc. Chicken
+        if (Character.toUpperCase(Character.toLowerCase(chicken)) == 'A') { //customer choose 1pc. Chicken
             System.out.println("\n==========================================");
             System.out.println("              1pc. Chicken");
             System.out.println("==========================================\n");
@@ -108,18 +108,18 @@ public class OrderingSystem01 {
             System.out.print("Enter Beverage Category: ");
                 drinksonechick = scan.next().charAt(0);
                 
-                    if (drinksonechick == 'A') {
+                    if (Character.toUpperCase(Character.toLowerCase(drinksonechick)) == 'A') {
                         System.out.print("Quantity: ");  //quantity of 1pc chick and coke
                             quantityonechick = scan.nextInt();
                         total += ((quantityonechick * 10) + (quantityonechick * 79));
                             receipt += quantityonechick + "               " + "1pc. Chicken w/ coke\n";
-                    } else if (drinksonechick == 'B') {
+                    } else if (Character.toUpperCase(Character.toLowerCase(drinksonechick)) == 'B') {
                         System.out.print("Quantity: ");  //quantity of 1pc chick and sprite
                             quantityonechick = scan.nextInt();
                         total += ((quantityonechick * 10) + (quantityonechick * 79));
                             receipt += quantityonechick + "               " + "1pc. Chicken w/ Sprite\n";
                            
-                    } else if (drinksonechick == 'C') {
+                    } else if (Character.toUpperCase(Character.toLowerCase(drinksonechick)) == 'C') {
                         System.out.print("Quantity: ");  //quantity of alacarte
                             quantityonechick = scan.nextInt();
                         total += quantityonechick * 79;
@@ -129,7 +129,7 @@ public class OrderingSystem01 {
                          
                     }
             
-        }   else if (chicken == 'B') { // customer order 2pc. chicken
+        }   else if (Character.toUpperCase(Character.toLowerCase(chicken)) == 'B') { // customer order 2pc. chicken
                     System.out.println("==========================================");
                     System.out.println("              2pc. Chicken\n");
                     System.out.println("==========================================\n");
@@ -142,18 +142,18 @@ public class OrderingSystem01 {
                     System.out.print("Enter Beverage Category:");
                           drinkstwochick = scan.next().charAt(0);
                     
-                    if (drinkstwochick == 'A') {
+                    if (Character.toUpperCase(Character.toLowerCase(drinkstwochick)) == 'A') {
                     System.out.print("Quantity: ");  //quantity of 2pc chick and coke
                             quantitytwochick = scan.nextInt();
                         total += ((quantitytwochick * 10) + (quantitytwochick * 150));
                                 receipt += quantitytwochick + "               " + "2pc. Chicken w/ coke\n";
                         
-                    } else if (drinkstwochick == 'B') {
+                    } else if (Character.toUpperCase(Character.toLowerCase(drinkstwochick)) == 'B') {
                         System.out.print("Quantity: ");  //quantity of 2pc chick and sprite
                             quantitytwochick = scan.nextInt();
                                 receipt += quantitytwochick + "               " + "2pc. Chicken w/ Sprite\n";
                             
-                    } else if (drinkstwochick == 'C') {
+                    } else if (Character.toUpperCase(Character.toLowerCase(drinkstwochick)) == 'C') {
                         System.out.print("Quantity: ");  //quantity of 2pc chick and alacarte
                             quantitytwochick = scan.nextInt();
                         total += quantitytwochick * 150;
@@ -165,7 +165,7 @@ public class OrderingSystem01 {
                 System.out.print("You Entered a wrong key !");
             }
  
-    }   else if (order == 'B') { // if customer order a pasta
+    }   else if (Character.toUpperCase(Character.toLowerCase(order)) == 'B') { // if customer order a pasta
 
              System.out.println("==========================================");
              System.out.println("                 Pasta");
@@ -178,7 +178,7 @@ public class OrderingSystem01 {
             System.out.print("Enter Pasta Category: ");
                 pasta = scan.next().charAt(0);
            
-            if (pasta == 'A') { //customer order a spaghetti
+            if (Character.toUpperCase(Character.toLowerCase(pasta)) == 'A') { //customer order a spaghetti
                 System.out.println("==========================================");
                 System.out.println("              Spaghetti");
                 System.out.println("==========================================\n");
@@ -191,18 +191,18 @@ public class OrderingSystem01 {
             System.out.print("Enter Beverage Category: ");
            
                 drinkspag = scan.next().charAt(0);
-                    if (drinkspag == 'A') {
+                    if (Character.toUpperCase(Character.toLowerCase(drinkspag)) == 'A') {
                       
                         System.out.print("Quantity: ");  //quantity of pasta coke
                             spag = scan.nextInt();
                         total += ((spag * 10) + (spag * 50));
                             receipt += spag + "               " + "Spaghetti w/ coke\n";
-                    } else if (drinkspag == 'B') {
+                    } else if (Character.toUpperCase(Character.toLowerCase(drinkspag)) == 'B') {
                         System.out.print("Quantity: ");  //quantity of pasta sprite
                             spag = scan.nextInt();
                         total += ((spag * 10) + (spag * 50));
                             receipt += spag + "               " + "Spaghetti w/ Sprite\n";
-                    } else if (drinkspag == 'C') {
+                    } else if (Character.toUpperCase(Character.toLowerCase(drinkspag)) == 'C') {
                         System.out.print("Quantity: ");  //quantity of pasta alacarte
                             spag = scan.nextInt();
                         total += spag * 50;
@@ -210,7 +210,7 @@ public class OrderingSystem01 {
                     } else {
                         System.out.print("You Entered a wrong key !");
                     }
-            }   else if (pasta == 'B') { // customer order a carbonara
+            }   else if (Character.toUpperCase(Character.toLowerCase(pasta)) == 'B') { // customer order a carbonara
                 System.out.println("==========================================");
                 System.out.println("              Carbonara");
                 System.out.println("==========================================\n");
@@ -224,17 +224,17 @@ public class OrderingSystem01 {
                 System.out.print("Enter Beverage Category: ");
                     drinkscarb = scan.next().charAt(0);
                 
-                    if (drinkscarb == 'A') {
+                    if (Character.toUpperCase(Character.toLowerCase(drinkscarb)) == 'A') {
                         System.out.print("Quantity: ");  //quantity of pasta coke
                             carb = scan.nextInt();
                         total += ((carb * 10) + (carb * 60));
                             receipt += carb + "               " + "Carbonara w/ coke\n";
-                    } else if (drinkscarb == 'B') {
+                    } else if (Character.toUpperCase(Character.toLowerCase(drinkscarb)) == 'B') {
                         System.out.print("Quantity: ");  //quantity of pasta sprite
                             carb = scan.nextInt();
                         total += ((carb * 10) + (carb * 60));
                             receipt += carb + "               " + "Carbonara w/ Sprite\n";
-                    } else if (drinkscarb == 'C') {
+                    } else if (Character.toUpperCase(Character.toLowerCase(drinkscarb)) == 'C') {
                         System.out.print("Quantity: ");  //quantity of pasta alacarte
                             carb = scan.nextInt();
                         total += carb * 60;
@@ -245,7 +245,7 @@ public class OrderingSystem01 {
                 }
   
         }   
-             else if (order == 'C') { // if customer order a dessert
+             else if (Character.toUpperCase(Character.toLowerCase(order)) == 'C') { // if customer order a dessert
 
                  System.out.println("==========================================");
                  System.out.println("                 Dessert");
@@ -258,7 +258,7 @@ public class OrderingSystem01 {
                  System.out.print("Enter Dessert Category: ");
                      dessert = scan.next().charAt(0);
                
-                 if (dessert == 'A') {
+                 if (Character.toUpperCase(Character.toLowerCase(dessert)) == 'A') {
                     System.out.println("==========================================");
                     System.out.println("              Ice Cream");
                     System.out.println("==========================================\n");
@@ -269,7 +269,7 @@ public class OrderingSystem01 {
                     total += ic * 25;
                         receipt += ic + "               " + "Ice Cream\n";
                  
-                 } else if (dessert == 'B') {
+                 } else if (Character.toUpperCase(Character.toLowerCase(dessert)) == 'B') {
                     System.out.println("==========================================");
                     System.out.println("              Brownies");
                     System.out.println("==========================================\n");
@@ -280,7 +280,7 @@ public class OrderingSystem01 {
                         receipt += brow + "               " + "Brownies\n";
                  }
              }
-                else if (order == 'D') { //add-ons
+                else if (Character.toUpperCase(Character.toLowerCase(order)) == 'D') { //add-ons
                         System.out.println("==========================================");
                         System.out.println("                 Add-ons");
                         System.out.println("==========================================\n");
@@ -292,7 +292,7 @@ public class OrderingSystem01 {
                         addons = scan.next().charAt(0);
                    
 
-                            if (addons == 'A') {
+                            if (Character.toUpperCase(Character.toLowerCase(addons)) == 'A') {
                                 System.out.println("==========================================");
                                 System.out.println("              Rice");
                                 System.out.println("==========================================\n");
@@ -302,7 +302,7 @@ public class OrderingSystem01 {
                                     rice = scan.nextInt();
                                 total += rice * 15;
                                     receipt += rice + "               " + "Rice\n";
-                                } else if (addons == 'B') {
+                                } else if (Character.toUpperCase(Character.toLowerCase(addons)) == 'B') {
                                     System.out.println("==========================================");
                                     System.out.println("              Gravy");
                                     System.out.println("==========================================\n");
@@ -345,7 +345,7 @@ public class OrderingSystem01 {
           pwdsnr = scan.next().charAt(0);
         System.out.print(" \n");
 
-        if (pwdsnr == 'Y') {
+        if (Character.toUpperCase(Character.toLowerCase(pwdsnr)) == 'Y') {
 
             discount1 = total * .20;
             total = total - discount1;
@@ -361,7 +361,7 @@ public class OrderingSystem01 {
         //Client pays money
         
 
-        while (transaction == 'Y') { // start of for loop for payment
+        while (Character.toUpperCase(Character.toLowerCase(transaction)) == 'Y') { // start of for loop for payment
 
             System.out.print(" \n");
             System.out.println("==========================================\n");
@@ -379,7 +379,7 @@ public class OrderingSystem01 {
                 System.out.println("              [Receipt]");
                 System.out.println("==========================================\n"); // intro receipt
           
-                if (answ == 'D') { // code for dine in and take out
+                if (Character.toUpperCase(Character.toLowerCase(answ)) == 'D') { // code for dine in and take out
                   System.out.println("Dine-in\n");                      
                 } else { 
                   System.out.print("Take-Home\n");
@@ -392,7 +392,7 @@ public class OrderingSystem01 {
                 System.out.println("Customer payment: " + payment);   //customer payment code
                 System.out.printf("Change: %.2f",payment1); //customer change   
 
-                if (pwdsnr == 'Y') { //discount code
+                if (Character.toUpperCase(Character.toLowerCase(pwdsnr)) == 'Y') { //discount code
                     System.out.println("\nDiscount: " + "20%");
                     System.out.println("\nThis serves as official receipt");
                     System.out.println("feedback? Email us @jobileepinoy.com.ph");
@@ -421,7 +421,7 @@ public class OrderingSystem01 {
                         System.out.println("              [Receipt]");
                         System.out.println("==========================================\n");
           
-                        if (answ == 'D') { // start of if statement for din/th
+                        if (Character.toUpperCase(Character.toLowerCase(answ)) == 'D') { // start of if statement for din/th
                             System.out.println("Dine-in\n");
                         } else { 
                             System.out.print("Take-Home");
