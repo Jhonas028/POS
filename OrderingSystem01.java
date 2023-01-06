@@ -41,6 +41,7 @@ public class OrderingSystem01 {
 
     //dineine or Take home
     char answ = 'D';
+    boolean validation = false;
       
     System.out.println("==========================================");
     System.out.println("             JOBILEE POS SYSTEM");
@@ -61,13 +62,21 @@ public class OrderingSystem01 {
             System.out.println("[T] for Take-Home\n");
             System.out.print("Type your Answer: ");
                 answ = scan.next().charAt(0);
+                if (Character.toUpperCase(Character.toLowerCase(answ)) == 'D' || Character.toUpperCase(Character.toLowerCase(answ)) == 'T') {
+                    validation = true;
+                }
+                else {
+                    System.out.print("Invalid keyword");
+                    System.exit(0);
+                }
+                
                        
         } else {
             System.out.print(" \n");
             System.out.print("Fail to Log-in, Please try again");
                 System.exit(0);
         }
-    
+        
     while (Character.toUpperCase(Character.toLowerCase(action)) == 'Y') { //start of looping
         System.out.println("\n==========================================");
         System.out.println("                   MENU");
