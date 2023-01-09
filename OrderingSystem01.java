@@ -57,18 +57,27 @@ public class OrderingSystem01 {
         pass = scan.nextInt();
         
         if (username.equals(user) && password == pass) {
-            System.out.println("\nInstruction: Type the corresponding letter for customer choice\n");
-            System.out.println("[D] for Dine-in");
-            System.out.println("[T] for Take-Home\n");
-            System.out.print("Type your Answer: ");
-                answ = scan.next().charAt(0);
-                if (Character.toUpperCase(Character.toLowerCase(answ)) == 'D' || Character.toUpperCase(Character.toLowerCase(answ)) == 'T') {
-                    validation = true;
-                }
-                else {
-                    System.out.print("Invalid keyword");
-                    System.exit(0);
-                }
+            while (Character.toUpperCase(Character.toLowerCase(action)) == 'Y') {
+                System.out.println("\nInstruction: Type the corresponding letter for customer choice\n");
+                System.out.println("[D] for Dine-in");
+                System.out.println("[T] for Take-Home\n");
+                System.out.print("Type your Answer: ");
+                    answ = scan.next().charAt(0);
+                    if (Character.toUpperCase(Character.toLowerCase(answ)) == 'D' || Character.toUpperCase(Character.toLowerCase(answ)) == 'T') {
+                        validation = true;
+                        break;
+                    
+                    }
+                    else {
+                        System.out.println("Invalid keyword");
+                   
+                        System.out.print(" \n");
+                        System.out.println("Continue? Y/N");
+                        System.out.print("Type your Answer: ");
+                            action = scan.next().charAt(0);
+                    }
+         
+            }
                 
                        
         } else {
@@ -160,6 +169,7 @@ public class OrderingSystem01 {
                     } else if (Character.toUpperCase(Character.toLowerCase(drinkstwochick)) == 'B') {
                         System.out.print("Quantity: ");  //quantity of 2pc chick and sprite
                             quantitytwochick = scan.nextInt();
+                        total += ((quantitytwochick * 10) + (quantitytwochick * 150));
                                 receipt += quantitytwochick + "               " + "2pc. Chicken w/ Sprite\n";
                             
                     } else if (Character.toUpperCase(Character.toLowerCase(drinkstwochick)) == 'C') {
