@@ -44,7 +44,7 @@ public class OrderingSystem01 {
     boolean validation = false;
       
     System.out.println("==========================================");
-    System.out.println("             JOBILEE POS SYSTEM");
+    System.out.println("             ORDERING SYSTEM");
     System.out.println("==========================================\n");
     
     System.out.println("==========================================");
@@ -91,10 +91,15 @@ public class OrderingSystem01 {
         System.out.println("                   MENU");
         System.out.println("==========================================\n");
           
-        System.out.println("[A] Chicken");
-        System.out.println("[B] Pasta");
-        System.out.println("[C] Dessert");
-        System.out.println("[D] Add-ons\n");
+        System.out.println("+-----------------------------------------+");
+        System.out.println("| A |             Chicken                 |");
+        System.out.println("+-----------------------------------------+");
+        System.out.println("| B |             Pasta                   |");
+        System.out.println("+-----------------------------------------+");
+        System.out.println("| C |             Dessert                 |");
+        System.out.println("+-----------------------------------------+");
+        System.out.println("| D |             Add-ons                 |");
+        System.out.println("+-----------------------------------------+\n");
     
         System.out.print("Enter Order Category: ");
             order =  scan.next().charAt(0);
@@ -105,8 +110,11 @@ public class OrderingSystem01 {
         System.out.println("                 Chicken");
         System.out.println("==========================================\n");
         
-        System.out.println("[A] 1pc. chicken (79)");
-        System.out.println("[B] 2pc. chicken (150)\n");
+        System.out.println("+-----------------------------------------+");
+        System.out.println("| A |            1pc. chicken (79)        |");
+        System.out.println("+-----------------------------------------+");
+        System.out.println("| B |            2pc. chicken (150)       |");
+        System.out.println("+-----------------------------------------+\n");
         
         
         System.out.print("Enter Chicken Category: ");
@@ -118,10 +126,15 @@ public class OrderingSystem01 {
             System.out.println("==========================================\n");
            
             
-            System.out.println("             Beverage\n");   //drinks
-            System.out.println("[A] Coke (+10)");
-            System.out.println("[B] Sprite(+12)");
-            System.out.println("[C] Alacarte\n");
+            System.out.println("+-----------------------------------------+");
+            System.out.println("|             BEVERAGE                    |");
+            System.out.println("+-----------------------------------------+");
+            System.out.println("| A |         Coke (+10)                  |");
+            System.out.println("+-----------------------------------------+");
+            System.out.println("| B |         Sprite(+12)                 |");
+            System.out.println("+-----------------------------------------+");
+            System.out.println("| C |         Alacarte                    |");
+            System.out.println("+-----------------------------------------+\n");
              
             System.out.print("Enter Beverage Category: ");
                 drinksonechick = scan.next().charAt(0);
@@ -152,10 +165,15 @@ public class OrderingSystem01 {
                     System.out.println("              2pc. Chicken\n");
                     System.out.println("==========================================\n");
             
-                    System.out.println("Beverage\n");   //drinks
-                    System.out.println("[A] Coke (+10)");
-                    System.out.println("[B] Sprite(+12)");
-                    System.out.println("[C] Alacarte\n");
+                    System.out.println("+-----------------------------------------+");
+                    System.out.println("|             BEVERAGE                    |");
+                    System.out.println("+-----------------------------------------+");
+                    System.out.println("| A |         Coke (+10)                  |");
+                    System.out.println("+-----------------------------------------+");
+                    System.out.println("| B |         Sprite(+12)                 |");
+                    System.out.println("+-----------------------------------------+");
+                    System.out.println("| C |         Alacarte                    |");
+                    System.out.println("+-----------------------------------------+\n");
                     
                     System.out.print("Enter Beverage Category:");
                           drinkstwochick = scan.next().charAt(0);
@@ -190,8 +208,11 @@ public class OrderingSystem01 {
              System.out.println("                 Pasta");
              System.out.println("==========================================\n");
         
-             System.out.println("[A] Spaghetti (50)");
-             System.out.println("[B] Carbonara (60)\n");
+             System.out.println("+----------------------------------------+");
+             System.out.println("| A |           Spaghetti (50)           |");
+             System.out.println("+----------------------------------------+");
+             System.out.println("| B |           Carbonara (60)           |");
+             System.out.println("+----------------------------------------+\n");
              
            
             System.out.print("Enter Pasta Category: ");
@@ -202,10 +223,15 @@ public class OrderingSystem01 {
                 System.out.println("              Spaghetti");
                 System.out.println("==========================================\n");
                 
-            System.out.println("Beverage\n");   //drinks
-            System.out.println("[A] Coke (+10)");
-            System.out.println("[B] Sprite(+12)");
-            System.out.println("[C] Alacarte\n");
+                System.out.println("+-----------------------------------------+");
+                System.out.println("|             BEVERAGE                    |");
+                System.out.println("+-----------------------------------------+");
+                System.out.println("| A |         Coke (+10)                  |");
+                System.out.println("+-----------------------------------------+");
+                System.out.println("| B |         Sprite(+12)                 |");
+                System.out.println("+-----------------------------------------+");
+                System.out.println("| C |         Alacarte                    |");
+                System.out.println("+-----------------------------------------+\n");
             
             System.out.print("Enter Beverage Category: ");
            
@@ -234,10 +260,15 @@ public class OrderingSystem01 {
                 System.out.println("              Carbonara");
                 System.out.println("==========================================\n");
 
-                System.out.println("Beverage\n");   //drinks
-                System.out.println("[A] Coke (+10)");
-                System.out.println("[B] Sprite(+12)");
-                System.out.println("[C] Alacarte\n");
+                System.out.println("+-----------------------------------------+");
+                System.out.println("|             BEVERAGE                    |");
+                System.out.println("+-----------------------------------------+");
+                System.out.println("| A |         Coke (+10)                  |");
+                System.out.println("+-----------------------------------------+");
+                System.out.println("| B |         Sprite(+12)                 |");
+                System.out.println("+-----------------------------------------+");
+                System.out.println("| C |         Alacarte                    |");
+                System.out.println("+-----------------------------------------+\n");
                 
                
                 System.out.print("Enter Beverage Category: ");
@@ -270,8 +301,11 @@ public class OrderingSystem01 {
                  System.out.println("                 Dessert");
                  System.out.println("==========================================\n");
         
-                 System.out.println("[A] Chocolate Ice cream (25)");
-                 System.out.println("[B] Brownies (20)\n");
+                 System.out.println("+-----------------------------------------+");
+                 System.out.println("| A |            Chocolate Ice cream (25) |");
+                 System.out.println("+-----------------------------------------+");
+                 System.out.println("| B |            Brownies (20)            |");
+                 System.out.println("+-----------------------------------------+\n");
         
           
                  System.out.print("Enter Dessert Category: ");
@@ -282,8 +316,11 @@ public class OrderingSystem01 {
                     System.out.println("              Ice Cream");
                     System.out.println("==========================================\n");
 
-                    System.out.println("Chocolate Ice Cream"); // quantity of ice cream
-                    System.out.print("Quantity: ");
+                    System.out.println("+----------------------------------------+");
+                    System.out.println("|             Chocolate Ice Cream        |");
+                    System.out.println("+----------------------------------------+\n");
+
+                    System.out.print("Quantity: "); // quantity of ice cream
                         ic = scan.nextInt();
                     total += ic * 25;
                         receipt += ic + "               " + "Ice Cream\n";
@@ -292,8 +329,10 @@ public class OrderingSystem01 {
                     System.out.println("==========================================");
                     System.out.println("              Brownies");
                     System.out.println("==========================================\n");
-                    System.out.println("Brownies"); // quantity of brownies
-                    System.out.print("Quantity: ");
+                    System.out.println("+---------------------------------------+");
+                    System.out.println("|             Brownies                  |");
+                    System.out.println("+---------------------------------------+\n");
+                    System.out.print("Quantity: "); // quantity of brownies
                         brow = scan.nextInt();
                     total += brow * 20;
                         receipt += brow + "               " + "Brownies\n";
@@ -304,8 +343,11 @@ public class OrderingSystem01 {
                         System.out.println("                 Add-ons");
                         System.out.println("==========================================\n");
 
-                        System.out.println("[A] Rice (15)");
-                        System.out.println("[B] Gravy (10)\n");
+                        System.out.println("+-----------------------------------------+");
+                        System.out.println("| A |            Rice (15)                |");
+                        System.out.println("+-----------------------------------------+");
+                        System.out.println("| B |            Gravy (10)               |");
+                        System.out.println("+-----------------------------------------+\n");
 
                         System.out.print("Enter Add-ons Category: \n");
                         addons = scan.next().charAt(0);
@@ -316,7 +358,10 @@ public class OrderingSystem01 {
                                 System.out.println("              Rice");
                                 System.out.println("==========================================\n");
 
-                                System.out.println("Rice");
+                                System.out.println("+---------------------------------------+");
+                                System.out.println("|             Rice                      |");
+                                System.out.println("+---------------------------------------+");
+
                                 System.out.print("Quantity: "); //add ons for rice
                                     rice = scan.nextInt();
                                 total += rice * 15;
@@ -325,7 +370,9 @@ public class OrderingSystem01 {
                                     System.out.println("==========================================");
                                     System.out.println("              Gravy");
                                     System.out.println("==========================================\n");
-                                    System.out.println("Gravy");
+                                    System.out.println("+-----------------------------------------+");
+                                    System.out.println("|              Gravy                      |");
+                                    System.out.println("+-----------------------------------------+");
                                     System.out.print("Quantity: "); // add ons for gravy
                                         gravy = scan.nextInt();
                                 total += gravy * 20;
@@ -416,12 +463,14 @@ public class OrderingSystem01 {
                     System.out.println("\nThis serves as official receipt");
                     System.out.println("feedback? Email us @jobileepinoy.com.ph");
                     System.out.print("Thank you please come again.\n");
+                    System.out.println("\n==========================================\n");
                     System.exit(0);
                 } else {
                     System.out.print("\n");
                     System.out.println("\nThis serves as official receipt");
                     System.out.println("feedback? Email us @jobileepinoy.com.ph");
                     System.out.print("Thank you please come again.\n"); 
+                    System.out.println("\n==========================================\n");
                     System.exit(0);
                 }
              } 
@@ -453,6 +502,7 @@ public class OrderingSystem01 {
                             System.out.println("\nThis serves as official receipt");
                             System.out.println("feedback? Email us @jobileepinoy.com.ph");
                             System.out.print("Thank you please come again.\n");
+                            System.out.println("\n==========================================\n");
                             System.exit(0);
                         }
                         else {
@@ -460,6 +510,7 @@ public class OrderingSystem01 {
                             System.out.println("This serves as official receipt");
                             System.out.println("feedback? Email us @jobileepinoy.com.ph");
                             System.out.print("Thank you please come again.\n"); 
+                            System.out.println("\n==========================================\n");
                             System.exit(0);
                         }
             } // end of customer equal payment
